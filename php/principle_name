@@ -1,0 +1,25 @@
+CLASS
+   -Tên Class chỉ cho phép chứa các kí tự a đến z, A đên Z, 0 đến 9, và _ (Underscore). Kí tự đặc biệt khác và space là không hợp lệ.
+   -Tên Class phải bắt đầu bằng kí tự chữ và dấu _, không được bắt đầu bằng kí tự số
+   -Tên Class phải được đặt bằng tiếng Anh, đúng chính tả và phải là danh từ
+   -  tên với đặc điểm các từ được phân tách bởi việc ghi hoa kí tự đầu tiên của mỗi từ và kí tự đầu tiên phải được ghi hoa.
+  - Tên class phải trùng với tên file và mỗi file chỉ chứa một class
+  -Tên class không nên dài quá năm từ
+- Tên class nên có tiền tố và hậu tố tương ứng
+-"Abstract" + AbstractName
+-InterfaceName + "Interface"
+
+
+METHOD
+  -các từ được phân tách bởi việc ghi hoa kí tự đầu tiên của mỗi từ và kí tự đầu tiên là kí tự in thường.
+  -Underscore is not allowed
+  - V + N
+  -must defined as public or protected
+
+Variable name:
+-các từ được phân tách bởi việc ghi hoa kí tự đầu tiên của mỗi từ và kí tự đầu tiên là kí tự in thường
+-Mảng với một tập hợp dữ liệu nên được đặt tên số nhiều
+
+tham khảo tại :https://techtalk.vn/huong-dan-viet-code-php-chuan-psr-tieu-chuan-khi-lap-trinh-php.html
+
+

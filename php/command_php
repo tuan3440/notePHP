@@ -1,0 +1,10 @@
+-require/require_once/include/include_once
+
+- require,include : khi import many same file -> go continue ,take out warning
+- require_once,include_once : khi import many same file-> stop program
+
+-require/include :
+     -require: khi import 1 error relative path,stop grogram
+     -include: khi import 1 error relative path,go continue,take out warning
+
+ 

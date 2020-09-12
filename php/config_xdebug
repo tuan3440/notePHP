@@ -1,0 +1,68 @@
+1,install xdebug
+
+sudo apt-get install -y php-xdebug
+
+2,openfile /etc/php/7.2/mod_available/xdebug.ini
+
+
+		zend_extension=xdebug.so
+		xdebug.remote_enable = 1
+		xdebug.remote_port = 9000
+		xdebug.idekey = PHPSTORM
+		xdebug.show_error_trance = 1
+		xdebug.remote_autostart = 0
+		
+3,openfile /etc/php/7.2/cli/php.ini
+
+		[Xdebug]
+		zend_extension_ts=/usr/lib/php/20170718/xdebug.so
+		xdebug.remote_enable=1
+		xdebug.remote_host=localhost
+		xdebug.remote_port=9000
+		xdebug.remote_handler="dbgp"
+		
+4,open php storm
+
++ file/setting/languages & Framework/php
+     - php language level: 7.2
+     - CLI Interpreter : add CLI
+     
+     -name : PHP 7.2
+     -PHP excutable: /usr/bin/php
+     -Ok
+     
+     -CLI Interpreter : select PHP 7.2
+     -Apply->ok
+     
+  finish
+  
+  + to run debug 1 any file:
+  Run/Edit COnfiguration
+  
+     -interpreter: PHP7.2
+     ok
+     
+     ->debug
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+     
+  
+  
+  
+  
+  
+  
+  
+     
+          
+
+

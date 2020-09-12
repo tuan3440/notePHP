@@ -1,0 +1,18 @@
+step 1: create the module folder
+
+step 2: create the etc/module.xml file
+
+step 3: create the registration.php file
+
+step 4: 
+bin/magento module:enable module_name
+bin/magento setup:upgrade
+(script to install the new module)
+
+step 5: check that the module is working
+(config.php 'name-module'=>1)
+
+bin/magento cache:clean
+
+
+

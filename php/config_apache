@@ -1,0 +1,44 @@
+path to apache :
+ect/apache2
+
+change port: ports.conf
+change domain :
+
+vao ect/apache2/sites-available/
+create file web1.conf,web2.conf...copy content file 000-default.conf
+edit 
+<VirtualHost *:80>
+        ServerAdmin webmaster@web1.com
+        ServerName web1.com                   //your domain
+        DocumentRoot /var/www/html/web1      // path to foler
+</VirtualHost>
+
+<VirtualHost></VirtualHost> Đây là cặp thẻ báo hiệu mở đầu và kết thúc của một khai báo về Vhost. Có một lưu ý nhỏ là nếu bạn nào đổi port của Apache (8080,81,v.v...) thì cũng phải đổi số 80 theo port các bạn chuyển sang nhé.
+
+ServerAdmin Từ khóa khai báo địa chỉ email của admin (Không bắt buộc).
+
+DocumentRoot Đây là từ khóa khai báo đường dẫn của thư mục sẽ được gọi khi người dùng truy cập vào domain được cấu hình. Đường dẫn này có thể nằm ở bất kỳ một phân vùng nào.
+
+ServerName Chính là domain mà bạn muốn đặt.
+
+<Directory></Directory> Đây là cặp thẻ dùng để cấp quyền truy cập cho thư mục nếu thư mục không được cấp quyền sẽ gặp lỗi 403 khi các bạn cố gắng truy cập. Đường dẫn thư mục của bạn có thể là một regular expression
+
+ <Directory "<đường dẫn thư mục">
+        Options FollowSymLinks
+        AllowOverride All
+        DirectoryIndex index.php
+        Require all granted
+    </Directory>
+
+* đăng ký DNS cho domain của bạn nữa là mọi việc hoàn tất.
+  vao ect/hosts
+IP domain
+
+Khi các bạn gõ địa chỉ yourdomain.com thì máy sẽ ưu tiên tìm địa chỉ IP của domain đó trong file hosts của hệ điều hành trước tiên.
+Nếu không có thì nó sẽ đi tìm địa chỉ IP của domain này thông qua các DNS Server trên Internet. Vì bạn đã khai báo trong file hosts nên nó sẽ sử dụng địa chỉ IP được khai báo trong đó luôn. Ở đây địa chỉ IP 127.0.0.1 trỏ về chính máy đang truy cập (chính là máy của bạn - còn nếu cấu hình trên server thì đó chính là bản thân máy server luôn). Bạn có thể sử dụng dài IP từ 127.0.0.1 -> 127.255.225.254 đây là dải IP trỏ về máy của bạn ( Nguyên dải luôn chứ không phải chỉ là 127.0.0.1 nhé ).
+
+
+* command apache ubuntu
+9,sudo service apache2 start : khởi động apache
+10,sudo service apache2 stop : tắt apache
+11,$ sudo service apache2 restart : khởi động lại apache

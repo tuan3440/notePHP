@@ -1,0 +1,2 @@
+cron : use: apache  pass :1
+elasticsearch : user:magento_elasticsearch  pass:2

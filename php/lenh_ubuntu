@@ -1,0 +1,18 @@
+1,kiem tra dia chi ip : ifconfig -a
+2,pwd :hiển thị vị trí hiện tại trong hệ thống file
+3,ls -l  :hiển thị quyền,kích thước file,..
+4,mkdir + name_folder :tạo folder
+5,touch + name_file : tạo file
+6,sao chép file : cp file1 file2
+7,sao chép thư mục : cp -r folder1 folder2
+8,chmod 777 name_file/name_folder: cấp đầy đủ quyền cho mọi đối tượng
+
+12,gedit name_file: edit file
+
+
+
+
+
+
+
+

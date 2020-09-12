@@ -1,0 +1,4 @@
+1,filter_var  : inspect validate data
+2,trim(): remove characters unnecessary
+3,parse_url(): parse url return host,path..
+4,addslashes():Hàm addslashes() trong PHP để chèn vào chuỗi khi trong chuỗi dấu nháy kép " mà có dấu nháy đơn ' hay trong chuỗi dấu nháy đơn ' có dấu nháy kép "

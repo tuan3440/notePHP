@@ -1,0 +1,81 @@
+-avoid collision of functions of variables that have different purposes but have the same names
+
+-classes allow you to organize better the code you use in your applications by making you put the code that manages related data in the same container and even promote reuse of your code or code of other people.
+
+procedural-program
+
+-Instead of one bulky function handling everything, we will break it into multiple functions
+
+-Using a Global Client Variable instead parameter
+
+-Separating Presentation From Logic
+
+-Eliminating Long if-else Statements
+
+- introduce a single action parameter in the $_GET variable and use the value from that as a function name.
+
+object-orient-program:
+
+SOLID:
+
+   -  Single responsibility principle: a specific class must solve a specific task - no more and no less
+   -  Open/closed principle:
+            +should be designed so that to change their behavior, we do not need to modify their source code.
+            + establish interface 
+            + utilizing inheritance and/or implementing interfaces that enable classes to polymorphically substitute for each other.
+   -  Liskov substitution principle
+   -  Interface segregation principle:
+           +  break the interface into several smaller ones and implement the necessary interfaces by each specific class.
+           + Do not add additional functionality to an existing interface by adding new methods.
+Instead, create a new interface and let your class implement multiple interfaces if needed.
+   -  Dependency inversion principle:
+     + High-level modules should not depend on low-level modules. Both should depend on abstractions.
+     + Abstractions should not depend on details. Details should depend on abstractions.
+
+DRY : don't repeat yourselfs.
+    +Knowledge duplication is always a DRY principle violation.
+    +Code duplication doesn’t necessarily mean violation of the DRY principle.
+    +DRY is about the duplication of knowledge, of intent. It’s about expressing the same thing in two different places, possibly in two totally different ways.
+
+    trying to apply DRY everywhere can have two results:
+        + Unnecessary coupling
+         + Unnecessary complexity
+     Applying DRY Depending On The Context
+
+cách sử dụng Xdebug:
+step over: chạy step by step,lướt qua hàm(chị nhận giá trị return của hàm)
+step into: chạy step by step,đi vào nội dung của các hàm con
+step out: nhảy đến breakpoint kế tiếp,nêu sko còn breakpoint nào thì sẽ kết thúc debug.
+
+
+Viết 1 mini crawler utility library để crawl và bóc tách data từ vnexpress, vietnamnet, dantri (sử dụng curl, ko sử dụng thư viện khác) -> mục đích để luyện tư duy về tổ chức code OOP, tổ chức folder, áp dụng các tiêu chuẩn SOLID vào code
+
+
+(gợi ý tổ chức
++ Bao gồm 1 base class Crawler define các shared methods, common properties, class con cho VnexpressCrawler, VietnamnetCrawler, DantriCrawler (some other utility classes for DB, CURL wrapper,....)
++ Viết 1 test script để demo các chức năng (input URL của trang article detail cua vnexpress hoặc vietnamnet/dantri -> bóc tách thông tin title, content và date lưu vào database))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

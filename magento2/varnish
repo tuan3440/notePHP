@@ -1,0 +1,7 @@
+varnishd -V : exam version
+sudo service varnish status : kiem tra status
+sudo service varnishd start/restart : 
+
+exam varnish has done yet, run sudo varnishlog,and run localhost,if terminal appear many info ,-> varnish has done
+
+netstat -tulpn : kiem tra cong 80 co dung truoc cong 8080 hay ko

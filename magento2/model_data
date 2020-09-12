@@ -1,0 +1,38 @@
+1, Use Factory.
+
+                $post = $this->_postFactory->create();
+		$collection = $post->getCollection();
+		foreach($collection as $item){
+			echo "<pre>";
+			print_r($item->getData());
+			echo "</pre>";
+		}
+
+getData() : get all data
+getData('title')/getTitle() : get title
+getPostId() : get id of post
+
+
+add,edit,delete
+
+add :  
+
+$post = $this->_postFactory->create();
+$post->setTitle('aaaa');
+$post->setContent('bbb');
+$post->save();
+
+edit:
+ $post = $this->_postFactory->create();
+ $post->load('id');
+ $post->setTitle('xxx");
+$post->save();
+
+delete:
+$post = $this->_postFactory->create();
+ $post->load('id');
+$post->delete();
+ 
+ 
+
+

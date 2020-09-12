@@ -1,0 +1,15 @@
+* include/require/include_once/require_once
+
+include/require : when import 1 not exact path file,require stop program .include continue run program
+
+include_once/require_one : when import 1 file two times,it use file first, twice omit.
+
+* when include/require,file has class inherited,implemented,it import before.
+
+*autoload:
+   - usefull : load auto many file class ,not need require each file,
+   - 2 way:
+    + way 1: use function sql_autoload_register on php
+    + way 2: use composer
+
+

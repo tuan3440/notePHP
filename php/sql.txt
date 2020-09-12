@@ -1,0 +1,33 @@
+* function date_time sql:
+CURRENT_DATE(): RETURN DATE CURRENT
+CURRENT_TIME()
+CURRENT_TIMESTAMP(): RETURN DATE TIME CURRENT
+DATE_ADD(DATE, INTERVAL value unit)
+ADDDATE(DATE, DAY)
+ADDTIME(TIME, '1:1:1')
+DATE(datetime): return date 
+datediff(date1, date2): return difference between date1 and date2
+date_format(datetime, format) : format datetime
+day(date): return date in month(1_31)
+dayname(date) : return date in week(monday..)
+hour(time) : return hour
+month(date)
+monthname(date)
+
+*function string sql:
+CONCAT(str1,str2,..):match string
+concat_ws(separator,str1,str2,..):match strings,add separator between strings
+field(str, str1, str2,..) :return index of str in list str1,str2..(start 1).return 0 if dont have in list)
+left(str, len): return string length :len,start from left of string
+ltrim(str) : return str after remove space left
+rtrim(str) : return str after remove space right
+
+
+*command need remember mysql:
+
+drop table + name_table : delete table
+delete from +name_table : delete data on table
+limit start,limit : limit number record get out:start form 0
+
+
+

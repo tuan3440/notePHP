@@ -1,0 +1,37 @@
+docker --version
+sudo systemclt status docker
+
+docker images: list image in computer
+docker pull name_image:name_tag : down image -> computer
+docker image rm name_image:name_tag : delete image 
+docker image rm imageID : delete image
+docker run -it --name="name_container" -h HostName imageID : run container image,create name,host
+docker ps : list container running
+docker ps -a: list container
+docker start containerID/name_container: start container
+exit : end run container
+docker attach containerID/name_container:run container image
+ctrl PQ : back container but want container active
+docker stop containerID/name_container:stop container image
+docker rm containerID/name_container:delete container
+docker exec containerID/name_container + command: run command container when external
+docker commit containerID/name_container name_image:tag:save container -> image
+docker save --output myimage.tar image_id : output image -> file
+docker load -i file.tar : load image as file
+docker tag image-id name_image:tag : đặt tên name,tag cho mage
+
+docker run -it -v path_my_computer:path_container container_id : share data between computer and container
+docker run -it --name name_container2 --volumes-from name_container1 image:tag: share data between 2 container
+
+
+docker volume create disk_name:create disk
+
+docker volume ls : list disk
+
+docker rm disk_name :delete disk
+
+docker run -it --name name_container --mount source=disk_name,target=path_container image:tag : share data container in disk_name
+docker run -it -v disk_name:path_container image:tag : share data between disk and container
+docker volume inspect disk_name: info disk_name
+
+

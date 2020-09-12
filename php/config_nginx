@@ -1,0 +1,36 @@
+path to apache :
+ect/nginx
+
+
+vao ect/nginx/sites-available/
+create file web1.conf,web2.conf...copy content file default
+edit 
+server {..}
++ listen : port
++ root : path foler website
++ servername : domain
++ config run file php:
+    location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+	#
+	#	# With php-fpm (or other unix sockets):
+		fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+	#	# With php-cgi (or other tcp sockets):
+	#	fastcgi_pass 127.0.0.1:9000;
+	}
++ config path(same .htaccess in apache)
+   ex: 
+ location /foo {
+    return 200 "foo.php";
+  }
+// khi chay ../foo,no se chay vao ../foo.php
+
+
+copy file vua tao sang ect/nginx/sites-enabled/
+
+* command ubuntu nginx
+service nginx start
+service nginx stop
+service nginx restart
+service nginx reload
+service nginx status

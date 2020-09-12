@@ -1,0 +1,31 @@
+to query sql 
+
+ \Magento\Framework\App\ResourceConnection $resource
+ $connection = $this->resource->getConnection();
+ $connection->query($sql);
+ 
+ * commit(). rowBack()
+ 
+ $this->requestCollectionFactory->create()->getResource()->commit/rowBack
+ 
+ get current locate
+ 
+   \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
+   use Magento\Directory\Helper\Data as DirectoryData;
+ $currentLocale = $this->scopeConfig->getValue(DirectoryData::XML_PATH_DEFAULT_LOCALE, \Magento\Store\Model\ScopeInterface::SCOPE_STORE, $storeId);
+ 
+ *formatdate
+ $completeDate_format = $this->formatDate($completeDate, 2, true);
+ 
+ *change time gmt
+ 
+ use Magento\Framework\Stdlib\DateTime\DateTime $datetime;
+ $date = $this->datetime->gmtDate($dateFormat, $datecurrent);
+ ex: $format = 'Y-m-d H:i:s';
+ 
+ 
+ *form :
+ if type is select,array [key => value]
+ if type is multiselect array ['label' => , 'value' => ];
+ 
+ 

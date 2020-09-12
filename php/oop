@@ -1,0 +1,106 @@
+traits:
+   -same class
+   -solve 1 class only inheritance 1 class
+   -have abstract method
+
+constant:
+     -ko co $
+     -viet hoa
+     -not have visibility
+     -access constant: 
+          + self::(trong class)
+          + name_class::(ngoài class)
+dirname(__DIR__) :quay lai thu muc,file parent
+
+
+final :prevent overriding
+
+static khá same constant,về cách gọi
+
+abstract / interface
+
+1 class inheritantce many interface (implements)
+abstract : abstract method or not-abstract method,visibility :public or protected
+interface : visibility:public
+method not declare,only define
+
+magic method: __construct,__destruct
+              __get,__set
+
+
+static :
+- Static methods can be called directly without needing an instance of the class
+- MyClass::myStaticMethod();
+- Static methods can be called from methods of other classes in the same way.
+
+Define : constant
+Define('name','value')
+
+
+
+*Namespace  :
+
+-use namespace when we have 2 file,each file container 2 class,which have same name.when we emb 2 file ,call class ,program notice error.to overcome it,we use namespace.
+
+-declare namespace:
+    +place it top file;
+    + use \ instead /
+-call namespace:
+
+    when 1 class have namspace,we dont call class common,we have to need:
+
+  + new namespace
+  + use namespace
+
+* Autoload :
+   - usefull : load auto many file class ,not need require each file,
+   - 2 way:
+    + way 1: use function sql_autoload_register on php
+    + way 2: use composer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

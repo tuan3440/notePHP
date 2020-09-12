@@ -1,0 +1,48 @@
+git init : initialize thư mục repo trên máy cline
+git remote add + remote_name+name_repo :kết nối github
+git pull + name_repo : update context from server before upload new context from client to 
+git status : inspect status change
+git add . : add all file changed
+git add + path_file : add one file
+git commit -a -m "message" : add + commit
+git push <remote_name> <branch_name> : upload to server branch of developer
+git push -u origin master : upload to server branch master
+git branch -a :view all branch current
+git branch +name_branch : create new branch
+git checkout + name_branch : move branch work
+git branch -d + name-branch : delete branch
+git remote : inspect all remote available
+git remote -v : inspect all remote available url
+git remote rename + old_name +new_name: rename remote
+git remote add +name_remote + name_repo: add one new remote
+git log --oneline: review history commit
+git merge +name_branch : merge branch working to name_branch
+git config --list ;view infomation config
+git config --global user.usernam ".." :config username
+git log : history commit
+git branch -d + name_branch : delete branch in local
+git push --delete: delete branch in branch remote
+git pull name_remote name_branch:get data on repo at branch_name ,merge changes from remote to local
+ 
+git pull --rebase origin3 master :???
+git merge + name_branch : merge name_branch in branch current
+git checkout + hash_commit : comeback time hash_commit:
+
+
+git init
+git clone + remote-url
+git remote : list remote local
+git remote -v : list remote server
+git checkout -b + name_branch : create branch new and switch
+git branch : list branch local
+git branch -a : list branh local and server
+git log: view history commit
+git reset --soft HEAD^ : change status has commited -> has add .
+
+git branch -D name_branch: delete branch local
+git push origin --delete name_branch : delete branch server
+
+vendor/magento/module-backend/Block/Widget/Grid/Column/Renderer/Number.php
+
+
+

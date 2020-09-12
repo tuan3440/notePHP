@@ -1,0 +1,18 @@
+
+EAV
+
+
+eav_entity_type(entity_type_id, entity_type_code,entity_table)
+   entity_type_code: loại thực thể :customer,catalog_category, catalog_product, order,invoice,shipment,..
+   entity_table : bảng lưu trũ các thực thể
+
+eav_attribute(attribute_id, entity_type_id,attribute_code)  :lưu cac thuộc tính (attribute_code) của cac entity
+   
+eav_entity(entity_id, entity_type_id, attribute_set_id)
+entity_id : thực thể cụ thể như người A,sản phẩm X
+   
+eav_entity_attribute (entity_atrribute_id, entity_type_id, attribute_id, attribute_set_id)
+
+eva_attribute_set( attribute_set_id, entity_type_id, attribute_set_name)
+
+

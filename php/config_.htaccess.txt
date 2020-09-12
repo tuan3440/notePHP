@@ -1,0 +1,12 @@
+vao /etc/apache2/sites-available/000-default.conf
+
+add 
+    <Directory /var/www/html/phpinit>
+       Options Indexes FollowSymLinks
+       AllowOverride All
+       Require all granted
+    </Directory>
+create .htaccess:
+RewriteEngine on
+RewriteRule Pattern Substitution [Optional Flags]
+

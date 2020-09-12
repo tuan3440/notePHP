@@ -1,0 +1,43 @@
+https://github.com/magento/magento2/issues/26465
+
+vendor/magento/framework/DB/Adapter/Pdo/Mysql.php
+
+  protected function _getColumnTypeByDdl($column)
+    {
+        switch ($column['DATA_TYPE']) {
+            case 'bool':
+                return Table::TYPE_BOOLEAN;
+            case 'tinytext':
+            case 'char':
+            case 'varchar':
+            case 'text':
+            case 'mediumtext':
+            case 'longtext':
+                return Table::TYPE_TEXT;
+            case 'blob':
+            case 'mediumblob':
+            case 'longblob':
+                return Table::TYPE_BLOB;
+            case 'tinyint':
+            case 'smallint':
+            case 'smallint unsigned':
+                return Table::TYPE_SMALLINT;
+            case 'mediumint':
+            case 'int':
+            case 'int unsigned':
+                return Table::TYPE_INTEGER;
+            case 'bigint':
+                return Table::TYPE_BIGINT;
+            case 'datetime':
+                return Table::TYPE_DATETIME;
+            case 'timestamp':
+                return Table::TYPE_TIMESTAMP;
+            case 'date':
+                return Table::TYPE_DATE;
+            case 'float':
+                return Table::TYPE_FLOAT;
+            case 'decimal':
+            case 'numeric':
+                return Table::TYPE_DECIMAL;
+        }
+    }

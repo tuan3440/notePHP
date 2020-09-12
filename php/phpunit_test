@@ -1,0 +1,96 @@
+* structure and namefile:
+- Các file tests nên ánh xạ với các file mã nguồn tương ứng trong từng thư mục và tên file nên được đặt giống với file mã nguồn cộng thêm từ Test ở sau
+- Tên lớp phải khớp hoàn toàn với tên file, điều này cũng nên áp dụng với các file mã nguồn khác
+*name_method:
+- Các phương thức trong các lớp test nên được bắt đầu với từ test
+- Tên phương thức nên có tính mô tả cái gì sẽ được test trong phương thức đó và cũng nên bao gồm tên phương thức đang được test. Tên method không cần phải ngắn hoặc viết tắt.
+- Ví dụ, bạn đang test phương thức có tên là verifyAccount() và bạn muốn test trường hợp mật khẩu khớp với account, bạn nên đặt tên method trong file test là testVerifyAccountMatchesPasswordGiven()
+* public_method:
+-PHPUnit không thể chạy các method test ở dạng private hay protected, chúng phải là public. Do đó, đối với các method test hay các method helpers (chẳng hạn data provider method phải ở dạng public. Mục đích của chúng ta là viết test thôi nên không cần phải lo lắng về tính đóng gói.
+
+*extends PHPUnit:
+ -cac class extends Testcase
+
+
+Creat project,install PHPUnit:
+vào project cần test,mở terminal:
+$ composer require --dev phpunit/phpunit
+
+$ ./vendor/phpunit/phpunit/phpunit
+$ alias phpunit="./vendor/phpunit/phpunit/phpunit"
+$ phpunit
+
+config phpunit.xml
+$ phpunit test/ 
+->test all class
+
+$ phpunit test/ --filter=name_method
+->test method cụ thể
+
+
+
+*Test dependencies :make one test method dependent on another :
+
+public function a()
+{
+...
+return $queue;
+}
+
+/**
+
+  * @depends a
+
+*/
+
+public function b(Queue $queue)
+{
+....
+}
+
+
+*Fixture:setUp(),tearDown()
+
+
+*dependencies inject:
+
+1,Mock
+
+The createStub($type) and createMock($type) method immediately return a test double object for the specified type (interface or class). The creation of this test double is performed using best practice defaults. The __construct() and __clone() methods of the original class are not executed and the arguments passed to a method of the test double will not be cloned.
+
+
+*getMockBuilder
+
+  If these defaults are not what you need then you can use the getMockBuilder($type) method to customize the test double generation using a fluent interface.
+
+By default, all methods of the original class are replaced with a dummy implementation that just returns null (without calling the original method). Using the will($this->returnValue()) method, for instance, you can configure these dummy implementations to return a value when called.
+
+$stub = $this->getMockBuilder(SomeClass::class)
+                     ->disableOriginalConstructor()
+                     ->disableOriginalClone()
+                     ->disableArgumentCloning()
+                     ->disallowMockingUnknownTypes()
+                     ->getMock();
+
+
+*expects() method:
+any() returns a matcher that matches when the method it is evaluated for is executed zero or more times.
+never() returns a matcher that matches when the method it is evaluated for is never executed.
+atLeastOnce() returns a matcher that matches when the method it is evaluated for is executed at least once.
+once() returns a matcher that matches when the method it is evaluated for is executed exactly once.
+exactly(int $count) returns a matcher that matches when the method it is evaluated for is executed exactly $count times.
+at(int $index) returns a matcher that matches when the method it is evaluated for is invoked at the given $index.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

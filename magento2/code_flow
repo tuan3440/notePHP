@@ -1,0 +1,10 @@
+run start index.php trong pub
+
+index.php calls static create() method of bootstrap class to create objectmanagerfactory and bootstrap objects.
+(Magento\Framework\App\Bootstrap)
+
+index.php calls createApplication() method of bootstrap object which in turn will initiate ObjectManager using objectManagerFactory. Then, application instance gets created using objectManager and returned to index.php.
+(Magento\Framework\App\Bootstrap)
+
+index.php calls run() method of bootstrap object to run the application, which in turn will call launch() method of application object.
+(Magento\Framework\App\Bootstrap)

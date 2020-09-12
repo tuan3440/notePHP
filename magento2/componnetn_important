@@ -1,0 +1,61 @@
+*HTTP Request:
+
+public function __construct(\Magento\Framework\App\Request\Http $request)
+{
+      $this->request = $request;
+}
+
+public function getValue()
+{
+     $this->request->getParams();//get all param
+     $this->request->getParam('id');// get id
+}
+
+
+*Resgistry:   Magento 2 authorizes you to register global variable that supports the static registry method.
+
+/**
+  * @var \Magento\Framework\Registry
+  */
+ 
+ protected $_registry;
+ 
+ /**
+ * ...
+ * ...
+ * @param \Magento\Framework\Registry $registry,
+ */
+public function __construct(
+    ...,
+    ...,
+    \Magento\Framework\Registry $registry,
+    ...
+) {
+    $this->_registry = $registry;
+    ...
+    ...
+}
+ 
+ /**
+ * Setting custom variable in registry to be used
+ *
+ */
+ 
+public function setCustomVariable()
+{
+     $this->registry->register('custom_var', 'Added Value');
+}
+ 
+/**
+ * Retrieving custom variable from registry
+ * @return string
+ */
+public function getCustomVariable()
+{
+     return $this->registry->registry('custom_var');
+}
+
+   
+
+
+
