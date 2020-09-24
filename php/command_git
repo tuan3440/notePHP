@@ -41,8 +41,10 @@ git reset --soft HEAD^ : change status has commited -> has add .
 
 git branch -D name_branch: delete branch local
 git push origin --delete name_branch : delete branch server
+git revert HEAD : change content commit newest
+git restore --staged + file : change status file from add -> not add
 
-vendor/magento/module-backend/Block/Widget/Grid/Column/Renderer/Number.php
+
 
 
 

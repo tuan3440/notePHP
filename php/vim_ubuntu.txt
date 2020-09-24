@@ -1,0 +1,5 @@
+vim + file : openfile 
+esc -> 
+:w : save
+:q : close
+:wq  : save and close
